@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs
+/Academt.TestConsole/obj
+/Academt.TestConsole/bin/Debug
+/Academy.TestConsole/obj
+/Academy.TestConsole/bin/Debug
+/Academy.TestConsole/.vs/Academy.TestConsole/v17
