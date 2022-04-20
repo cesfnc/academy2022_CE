@@ -17,6 +17,7 @@ namespace Academy.TestConsole
             //Console.WriteLine(args[0]);
 
             string concatArgs2 = string.Join(", ", args);
+            string concatArgs2NoSeparatore = string.Concat(args);
             Console.WriteLine(concatArgs2);
 
             //int, double, decimal, float
@@ -51,6 +52,17 @@ namespace Academy.TestConsole
 
             //bool hasC = myString3.Contains(nullString);
             int indexA = myString3.IndexOf("a");
+
+
+            //formattazione e composite string
+
+            string format = "Posizione X {1}, test test Xamarin";
+            string resultFormat = format.Replace("X", "NewString");
+
+            format = "Posizione {0} {1}, test test {0}{0} {2}";
+            resultFormat = string.Format(format, "zero", 0, "X");
+
+            resultFormat = $"Posizione {isNull} {myString3}, test test {myString3}";
 
             Console.WriteLine("nullString is null? " + isNull);
             Console.WriteLine(result);
