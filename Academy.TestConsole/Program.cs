@@ -12,6 +12,30 @@ namespace Academy.TestConsole
 
         static void Main(string[] args)
         {
+            //123 12/08/2020 true
+
+            int argument0Parsed =  int.Parse(args[0]); //123
+            int result; //default 0
+            bool isParsed = int.TryParse(args[0], out result);
+
+            DateTime dateTime;
+            DateTime.TryParse(args[1], out dateTime); //12/08/2020
+            //equivale a 
+            //DateTime.TryParse(args[1], out DateTime dateTime1);
+
+            DateTime.TryParse("05-12-56 12:34", out dateTime);
+
+            bool bArg;
+            bool.TryParse(args[2], out bArg); //true
+            bArg = bool.Parse("TRUE"); //true
+
+            double dParsed = double.Parse("123123123");
+
+            /*
+            var dTemp = 12D;
+            double dTemp2 = (double)argument0Parsed;
+            */
+
 
             DoWork();
 
