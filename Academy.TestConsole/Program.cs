@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Academy.TestConsole.Constants;
 
 namespace Academy.TestConsole
@@ -77,14 +78,19 @@ namespace Academy.TestConsole
             double e = Math.Pow(a, 2);
 
 
+            var  cultureUS = CultureInfo.GetCultureInfo("en-US");
+
+
             string aS = a.ToString(); // 12 => "12"
             // 12 =>  € 12.00
-            aS = a.ToString("C");
+            aS = a.ToString("C"); //culture corrente (it-IT) => 12,00 €
+            aS = a.ToString("C", cultureUS); // culture (en-US) => $12.00
             aS = a.ToString("C4");
             // 12 => 12.0
-            aS = a.ToString("##.0");
+            aS = a.ToString("##.0");            // "12,0"
+            aS = a.ToString("##.0", cultureUS); // "12.0"
 
-            //percencentuale
+            //percentuale
             aS = a.ToString("P");
 
 
