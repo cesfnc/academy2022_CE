@@ -18,6 +18,30 @@ namespace Academy.TestConsole
             int result; //default 0
             bool isParsed = int.TryParse(args[0], out result);
 
+            if (argument0Parsed > 1000)
+            {
+                string pippo = "";
+                pippo = args[0];
+                Console.WriteLine(pippo);
+            }
+            else
+            {
+                int pippo = result;
+            }
+            
+            switch (result)
+            {
+                case 0:
+                    Console.WriteLine(ConsoleName);
+                    break;
+                case 123:
+                    Console.WriteLine("123 ok");
+                    break;
+                default:
+                    break;
+            }
+
+
             DateTime dateTime;
             DateTime.TryParse(args[1], out dateTime); //12/08/2020
             //equivale a 
