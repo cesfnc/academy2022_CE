@@ -20,27 +20,74 @@ namespace Academy.TestConsole
 
             if (argument0Parsed > 1000)
             {
-                string pippo = "";
-                pippo = args[0];
-                Console.WriteLine(pippo);
+                Console.WriteLine(argument0Parsed);
             }
             else
             {
-                int pippo = result;
-            }
-            
-            switch (result)
-            {
-                case 0:
-                    Console.WriteLine(ConsoleName);
-                    break;
-                case 123:
-                    Console.WriteLine("123 ok");
-                    break;
-                default:
-                    break;
+                Console.WriteLine("Attenzione: non sono riuscito a fare il parse");
             }
 
+            string bu = "a";
+            //var ciccio = 34D;
+            switch (bu)
+            {
+                case "a":
+                    Console.WriteLine(ConsoleName);
+                    break;
+                case "b":
+                case "c":
+                    Console.WriteLine("b o c");
+                    break;
+                case "d":
+                    Console.WriteLine("d");
+                    break;
+                default:
+                    //qualcosa da eseguire
+                    break;
+            }
+            //equivale
+            if (bu.Equals("a")) //equivale a bu =="a"
+            {
+                Console.WriteLine(ConsoleName);
+            }
+            else if (bu == "b" || bu == "c")
+            {
+                Console.WriteLine("123 ok");
+            }
+            else if (bu == "d")
+            {
+                Console.WriteLine("d");
+            }
+            else
+            {
+                //qualcosa da eseguire
+            }
+
+            int i = 34;
+            if (i > 100)
+            {
+
+            }
+            else if (i > 50)
+            { 
+            
+            }
+            else if (i > 10)
+            {
+            
+            }
+            else
+            {
+
+            }
+
+            switch ("azione")
+            {
+                case "do":
+                    break;
+                case "for": 
+                    break;
+            }
 
             DateTime dateTime;
             DateTime.TryParse(args[1], out dateTime); //12/08/2020
