@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Academy.Common.Constants;
+using System;
 using System.Collections;
 using System.Globalization;
-using Academy.TestConsole.Constants;
 
 namespace Academy.TestConsole
 {
     internal class Program
     {
         public const string ConsoleName = "Test Console";
-        public const int IntConstant1 = 12;
-        const bool BoolConstant1 = false;
 
         static void Main(string[] args)
         {
+            Console.WriteLine(CommonConstants.AcademyName);
+
             foreach (var item in args)
             {
                 Console.WriteLine(item);
@@ -133,13 +133,6 @@ namespace Academy.TestConsole
 
             }
 
-            switch ("azione")
-            {
-                case "do":
-                    break;
-                case "for": 
-                    break;
-            }
 
             DateTime dateTime;
             DateTime.TryParse(args[1], out dateTime); //12/08/2020
@@ -161,9 +154,6 @@ namespace Academy.TestConsole
 
 
             DoWork();
-
-            string[] test0;
-            string[] test1 = new string[0];
 
             string concatArgs2 = string.Join(", ", args);
             string concatArgs2NoSeparatore = string.Concat(args);
