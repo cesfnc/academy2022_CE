@@ -12,6 +12,45 @@ namespace Academy.TestConsole
 
         static void Main(string[] args)
         {
+            for (int j = 0; j < 5; j++)
+            {
+                Console.WriteLine(j); //0,1,2,3,4
+            }
+
+            int k = 10;
+            do
+            {
+                Console.WriteLine(k); //10,11
+                k++;
+            } while (k < 12);
+
+
+            int l = 7;
+            while (l < 10)
+            {
+                Console.WriteLine(l); //7,8,9
+                l++;
+            }
+
+            int m = 5;
+            while(true)
+            {
+                if (m == 10)
+                {
+                    break;
+                }
+
+                m++;
+                if (m < 8)
+                {
+                    continue;
+                }
+
+                Console.WriteLine(m);
+            }
+
+
+
             //123 12/08/2020 true
 
             int argument0Parsed =  int.Parse(args[0]); //123
