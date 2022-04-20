@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Globalization;
 using Academy.TestConsole.Constants;
 
@@ -12,6 +13,18 @@ namespace Academy.TestConsole
 
         static void Main(string[] args)
         {
+            foreach (var item in args)
+            {
+                Console.WriteLine(item);
+            }
+            //equivalente
+            for (int h = 0; h < args.Length; h++)
+            {
+                Console.WriteLine(args[h]);
+            }
+
+
+
             for (int j = 0; j < 5; j++)
             {
                 Console.WriteLine(j); //0,1,2,3,4
