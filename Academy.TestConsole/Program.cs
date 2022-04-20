@@ -18,9 +18,9 @@ namespace Academy.TestConsole
             int result; //default 0
             bool isParsed = int.TryParse(args[0], out result);
 
-            if (argument0Parsed > 1000)
+            if (isParsed == true)
             {
-                Console.WriteLine(argument0Parsed);
+                Console.WriteLine(result);
             }
             else
             {
