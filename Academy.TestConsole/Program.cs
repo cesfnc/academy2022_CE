@@ -12,31 +12,52 @@ namespace Academy.TestConsole
 
         static void Main(string[] args)
         {
+
+            DoWork();
+
             string[] test0;
             string[] test1 = new string[0];
-
-            //Console.WriteLine(args[0]);
 
             string concatArgs2 = string.Join(", ", args);
             string concatArgs2NoSeparatore = string.Concat(args);
             Console.WriteLine(concatArgs2);
 
-            //int, double, decimal, float
-            //string
-            //bool
-            //enum
+            ArrayOperations();
 
-            var MyStringList2 = new string[] { "wer" , "ert"};
-            var MyStringList3 = new string[3] { "wer", "ert", "asd" };
+            StringOperations();
 
-            int length = MyStringList3.Length; //3
-            string pos0 = MyStringList3[0]; //"wer"
-            string pos1 = MyStringList3[1]; //"ert"
-            string pos2 = MyStringList3[2]; //"asd"
+            int a = 12;
+            int b = 8;
+            var c = (a + b) * a;
+            var d = c / a;
+            double e = Math.Pow(a, 2);
 
-            MyStringList3.SetValue("ertertert", 0);
-            //MyStringList3.SetValue("ertertert", 5); non si può fare l'indice (5) è maggiore della capienza (3) della array
+            var cultureUS = CultureInfo.GetCultureInfo("en-US");
 
+            IntToStringOperations(a, cultureUS);
+
+            DateTimeOperations(cultureUS);
+
+            Console.ReadKey();
+        }
+
+        private static void IntToStringOperations(int a, CultureInfo cultureUS)
+        {
+            string aS = a.ToString(); // 12 => "12"
+            // 12 =>  € 12.00
+            aS = a.ToString("C"); //culture corrente (it-IT) => 12,00 €
+            aS = a.ToString("C", cultureUS); // culture (en-US) => $12.00
+            aS = a.ToString("C4");
+            // 12 => 12.0
+            aS = a.ToString("##.0");            // "12,0"
+            aS = a.ToString("##.0", cultureUS); // "12.0"
+
+            //percentuale
+            aS = a.ToString("P");
+        }
+
+        private static void StringOperations()
+        {
             string myString3 = null;
             string nullString = null;
             string myString2 = ConsoleName;
@@ -70,33 +91,13 @@ namespace Academy.TestConsole
             Console.WriteLine("a is on position " + indexA);
 
             myString3 = "";
+        }
 
-            int a = 12;
-            int b = 8;
-            var c = (a + b) * a;
-            var d = c / a;
-            double e = Math.Pow(a, 2);
-
-
-            var  cultureUS = CultureInfo.GetCultureInfo("en-US");
-
-
-            string aS = a.ToString(); // 12 => "12"
-            // 12 =>  € 12.00
-            aS = a.ToString("C"); //culture corrente (it-IT) => 12,00 €
-            aS = a.ToString("C", cultureUS); // culture (en-US) => $12.00
-            aS = a.ToString("C4");
-            // 12 => 12.0
-            aS = a.ToString("##.0");            // "12,0"
-            aS = a.ToString("##.0", cultureUS); // "12.0"
-
-            //percentuale
-            aS = a.ToString("P");
-
-
+        private static void DateTimeOperations(CultureInfo cultureUS)
+        {
             DateTime dateTime = DateTime.Now;
             DateTime dateTime1 = new DateTime(2020, 12, 15);
-            
+
 
             string dateTimeString = dateTime.ToString();        // 20/04/2022 12:52:38      it
             dateTimeString = dateTime.ToString(cultureUS);      // 4/20/2022 12:52:38 PM    us
@@ -105,9 +106,32 @@ namespace Academy.TestConsole
             var dateTime2 = dateTime1.AddDays(25.5);
             TimeSpan interval = dateTime - dateTime1;
             TimeSpan interval1 = new TimeSpan(15, 4, 40, 0);
+        }
 
+        private static void ArrayOperations()
+        {
+            var MyStringList2 = new string[] { "wer", "ert" };
+            var MyStringList3 = new string[3] { "wer", "ert", "asd" };
 
-            Console.ReadKey();
+            int length = MyStringList3.Length; //3
+            string pos0 = MyStringList3[0]; //"wer"
+            string pos1 = MyStringList3[1]; //"ert"
+            string pos2 = MyStringList3[2]; //"asd"
+
+            MyStringList3.SetValue("ertertert", 0);
+            //MyStringList3.SetValue("ertertert", 5); non si può fare l'indice (5) è maggiore della capienza (3) della array
+        }
+
+        static void DoWork()
+        {
+            Console.WriteLine("DoWork");
+            Console.WriteLine("Ciao a tutti");
+
+        }
+
+        string DoString()
+        {
+            return "";
         }
     }
 }
