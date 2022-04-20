@@ -59,10 +59,10 @@ namespace Academy.TestConsole
             string format = "Posizione X {1}, test test Xamarin";
             string resultFormat = format.Replace("X", "NewString");
 
-            format = "Posizione {0} {1}, test test {0}{0} {2}";
-            resultFormat = string.Format(format, "zero", 0, "X");
+            format = "Posizione {0} {1:C}, test test {0}{0} {2}";
+            resultFormat = string.Format(format, "zero", 12, "X");
 
-            resultFormat = $"Posizione {isNull} {myString3}, test test {myString3}";
+            resultFormat = $"Posizione {isNull} {myString3}, test test {234324:C}";
 
             Console.WriteLine("nullString is null? " + isNull);
             Console.WriteLine(result);
@@ -75,8 +75,18 @@ namespace Academy.TestConsole
             var c = (a + b) * a;
             var d = c / a;
             double e = Math.Pow(a, 2);
-            
-            
+
+
+            string aS = a.ToString(); // 12 => "12"
+            // 12 =>  € 12.00
+            aS = a.ToString("C");
+            aS = a.ToString("C4");
+            // 12 => 12.0
+            aS = a.ToString("##.0");
+
+            //percencentuale
+            aS = a.ToString("P");
+
 
             Console.ReadKey();
         }
