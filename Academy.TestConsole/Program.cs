@@ -94,6 +94,19 @@ namespace Academy.TestConsole
             aS = a.ToString("P");
 
 
+            DateTime dateTime = DateTime.Now;
+            DateTime dateTime1 = new DateTime(2020, 12, 15);
+            
+
+            string dateTimeString = dateTime.ToString();        // 20/04/2022 12:52:38      it
+            dateTimeString = dateTime.ToString(cultureUS);      // 4/20/2022 12:52:38 PM    us
+            dateTimeString = dateTime.ToString("d.M.y");        // 20.4.22                  custom
+
+            var dateTime2 = dateTime1.AddDays(25.5);
+            TimeSpan interval = dateTime - dateTime1;
+            TimeSpan interval1 = new TimeSpan(15, 4, 40, 0);
+
+
             Console.ReadKey();
         }
     }
