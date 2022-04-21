@@ -11,11 +11,25 @@ namespace Academy.EntitesConsole
     {
         static void Main(string[] args)
         {
+            //metodo statico della class Person (non serve istanza)
             int ageS = Person.GetAgeStatic(new DateTime(1950, 4, 21));
 
+            //nuova istanza, oggetto mario
             Person mario = new Person();
             mario.Name = "Mario";
             mario.Surname = "Gallo";
+
+            //nuova istanza con assegnazione di proprietà inline
+            var rodolfo = new Person("Rodolfo", "Tasso") { 
+                DateOfBirth = new DateTime() 
+            };
+
+            var artemio = new Person() { 
+                Name = "Artemio", 
+                Surname = "Grillo", 
+                DateOfBirth = new DateTime(1975, 7, 4) 
+            };
+
             mario.DateOfBirth = new DateTime(1950, 4, 21);
             
             var giorgia = new Person();
@@ -42,14 +56,6 @@ namespace Academy.EntitesConsole
 
             Console.ReadKey();
 
-            if ((1 > 0) && (2 > 1))
-            {
-                // Take appropriate action.
-            }
-            if (1 > 0 && 2 > 1)
-            {
-                // Take appropriate action.
-            }
 
         }
     }
