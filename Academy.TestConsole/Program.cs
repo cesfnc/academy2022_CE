@@ -43,6 +43,19 @@ namespace Academy.TestConsole
             object season2 = Enum.Parse(typeof(Season), "winter", true);
             Season realSeason = (Season)season2;
 
+
+            Season aaa = Season.Autumn;
+            Console.WriteLine($"Integral value of {aaa} is {(int)aaa}");  // output: Integral value of Autumn is 2
+
+            var bbb = (Season)1;
+            Console.WriteLine(bbb);  // output: Summer
+
+            var ccc = (Season)4;
+            Console.WriteLine(ccc);  // output: 4
+
+
+
+
             foreach (var item in args)
             {
                 Console.WriteLine(item);
