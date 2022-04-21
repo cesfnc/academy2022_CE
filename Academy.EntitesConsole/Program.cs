@@ -12,10 +12,13 @@ namespace Academy.EntitesConsole
         static void Main(string[] args)
         {
             //Publication p = new Publication("","",1); //classe abstract non instanziabile
-            Book b = new Book("", "", 1);
-            Periodical p = new Periodical("", "", 1);
-            Publication pb = new Periodical("", "", 1);
+            Book b = new Book("My title", "Gallo Mario", 134);
+            Periodical p = new Periodical("Fashon", "AAVV", 30, 7);
+            Publication pb = new Periodical("Casa", "AAVV", 15, 30);
             
+            string bDescr = b.ToDescription();
+            string pDescr = p.ToDescription();
+            string pbDescr = pb.ToDescription();
 
             var car = new Car();
             car.GetAge();

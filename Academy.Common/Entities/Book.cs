@@ -18,7 +18,7 @@ namespace Academy.Common.Entities
 
         public override string ToString()
         {
-            return "override ToString di Publication";
+            return "Book " + ToDescription();
         }
     }
 }
