@@ -1,4 +1,5 @@
 ﻿using Academy.Common.Constants;
+using Academy.Common.Enums;
 using System;
 using System.Collections;
 using System.Globalization;
@@ -12,6 +13,35 @@ namespace Academy.TestConsole
         static void Main(string[] args)
         {
             Console.WriteLine(CommonConstants.AcademyName);
+
+            var season = Season.Spring;
+            switch (season)
+            { 
+                case Season.Spring:
+                    Console.WriteLine(season);
+                    break;
+                case Season.Summer:
+                    break;
+                case Season.Autumn:
+                    break;
+                case Season.Winter:
+                    break;
+                default:
+                    Console.WriteLine("stagione non trovata");
+                    break;
+            }
+
+            string winter = "Winter";
+            //Season season1 = winter;
+            var season1 = Enum.Parse(typeof(Season), winter);
+
+            Type typeSeasonType = typeof(Season);
+            Type typeSeason = season1.GetType();
+            Type typeWinter = winter.GetType();
+            
+
+            object season2 = Enum.Parse(typeof(Season), "winter", true);
+            Season realSeason = (Season)season2;
 
             foreach (var item in args)
             {
