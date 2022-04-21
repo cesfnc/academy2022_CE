@@ -10,6 +10,7 @@ namespace Academy.Common.Entities
     {
         private string myVar;
 
+        #region Properties
         public string MyProperty
         {
             get 
@@ -22,8 +23,6 @@ namespace Academy.Common.Entities
             }
         }
 
-
-        //nome, cognome, data di nascita, età (calcolata)
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime DateOfBirth { get; set; }
@@ -39,7 +38,41 @@ namespace Academy.Common.Entities
                 return GetAgePrivate();
             }
         }
+        #endregion
 
+        public Person()
+        {
+            //TODO fare quello
+
+            DateOfBirth = new DateTime(1901, 1, 1);
+        }
+
+        /// <summary>
+        /// ctor
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="surname"></param>
+        public Person(string name, string surname) : this()
+        {
+            #warning sarebbe bello avere anche un costruttore con data di nascita
+
+            Name = name;
+            Surname = surname;
+        }
+
+        #region private methods
+
+        private int GetAgePrivate()
+        {
+            //TODO fare questo
+            var interval = DateTime.Now - DateOfBirth;
+            var age = (int)Math.Round(interval.TotalDays / 365, 0);
+            return age;
+        }
+
+        #endregion
+
+        #region public methods
         public int GetAge()
         {
             var interval = DateTime.Now - DateOfBirth;
@@ -47,13 +80,11 @@ namespace Academy.Common.Entities
             return age;
         }
 
-        private int GetAgePrivate()
-        {
-            var interval = DateTime.Now - DateOfBirth;
-            var age = (int)Math.Round(interval.TotalDays / 365, 0);
-            return age;
-        }
-
+        /// <summary>
+        /// Get Age by Date of birth
+        /// </summary>
+        /// <param name="dateOfBirth">Date of birth</param>
+        /// <returns>the age</returns>
         public static int GetAgeStatic(DateTime dateOfBirth)
         {
             var interval = DateTime.Now - dateOfBirth;
@@ -61,12 +92,11 @@ namespace Academy.Common.Entities
             return age;
         }
 
-
         public string GetDescription()
         {
             return $"Ciao sono {Name} {Surname} e ho {Age} anni";
         }
-
+        #endregion
 
     }
 }
