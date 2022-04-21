@@ -53,7 +53,8 @@ namespace Academy.TestConsole
             var ccc = (Season)4;
             Console.WriteLine(ccc);  // output: 4
 
-
+            Convert(season2);
+            Convert(winter);
 
 
             foreach (var item in args)
@@ -312,6 +313,27 @@ namespace Academy.TestConsole
         string DoString()
         {
             return "";
+        }
+
+        static void Convert(object obj)
+        {
+            switch (obj.GetType().Name)
+            {
+                case "String":
+
+                    break;
+                case "DateTime":
+
+                    break;
+                case "Int":
+
+                    break;
+                default:
+                    break;
+            }
+
+
+        
         }
     }
 }
