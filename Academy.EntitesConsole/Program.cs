@@ -11,6 +11,33 @@ namespace Academy.EntitesConsole
     {
         static void Main(string[] args)
         {
+            //Publication p = new Publication("","",1); //classe abstract non instanziabile
+            Book b = new Book("", "", 1);
+            Periodical p = new Periodical("", "", 1);
+            Publication pb = new Periodical("", "", 1);
+            
+
+            var car = new Car();
+            car.GetAge();
+
+
+            var bike = new Bicycle("", "");
+            bike.GetAge();
+
+            var vehicle = new Vehicle();
+            var vehicle2 = new Vehicle("", "");
+            vehicle2.GetAge();
+            
+
+            PersonTests();
+
+            Console.ReadKey();
+
+
+        }
+
+        private static void PersonTests()
+        {
             //metodo statico della class Person (non serve istanza)
             int ageS = Person.GetAgeStatic(new DateTime(1950, 4, 21));
 
@@ -20,18 +47,20 @@ namespace Academy.EntitesConsole
             mario.Surname = "Gallo";
 
             //nuova istanza con assegnazione di proprietà inline
-            var rodolfo = new Person("Rodolfo", "Tasso") { 
-                DateOfBirth = new DateTime() 
+            var rodolfo = new Person("Rodolfo", "Tasso")
+            {
+                DateOfBirth = new DateTime()
             };
 
-            var artemio = new Person() { 
-                Name = "Artemio", 
-                Surname = "Grillo", 
-                DateOfBirth = new DateTime(1975, 7, 4) 
+            var artemio = new Person()
+            {
+                Name = "Artemio",
+                Surname = "Grillo",
+                DateOfBirth = new DateTime(1975, 7, 4)
             };
 
             mario.DateOfBirth = new DateTime(1950, 4, 21);
-            
+
             var giorgia = new Person();
             giorgia.Name = "Giorgia";
             giorgia.DateOfBirth = new DateTime(1930, 6, 18);
@@ -53,10 +82,6 @@ namespace Academy.EntitesConsole
             Console.WriteLine(mario.GetDescription());
 
             //person.GetAgePrivate(); //inaccessibile
-
-            Console.ReadKey();
-
-
         }
     }
 }
