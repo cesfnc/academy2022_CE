@@ -1,7 +1,6 @@
 ﻿using Academy.Common.Constants;
 using Academy.Common.Enums;
 using System;
-using System.Collections;
 using System.Globalization;
 
 namespace Academy.TestConsole
@@ -16,7 +15,7 @@ namespace Academy.TestConsole
 
             var season = Season.Spring;
             switch (season)
-            { 
+            {
                 case Season.Spring:
                     Console.WriteLine(season);
                     break;
