@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.EntitesConsole", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Totip", "..\Academy.Totip\Academy.Totip.csproj", "{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.RentalAgency", "..\Academy.RentalAgency\Academy.RentalAgency.csproj", "{66B31C62-28E7-438D-9A26-B9F7C53FB487}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B31C62-28E7-438D-9A26-B9F7C53FB487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B31C62-28E7-438D-9A26-B9F7C53FB487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B31C62-28E7-438D-9A26-B9F7C53FB487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B31C62-28E7-438D-9A26-B9F7C53FB487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,8 +9,25 @@ namespace Academy.Common.Entities
 {
     public class Car : Vehicle
     {
-        public string Plate { get; set; }
+        public int Seats { get; set; }
 
 
+        public Car(string plate, string model, int dailyPrice, bool isForNewDrivers)
+        {
+            Plate = plate;
+            Model = model;
+            DailyPrice = dailyPrice;
+            IsForNewDriver = isForNewDrivers;
+        }
+
+        public override string ToString()
+        {
+            string result = $"{Model} Targa '{Plate}' Prezzo giornaliero {DailyPrice:C}";
+            if (IsForNewDriver)
+            {
+                result = result + " (Neo-patentati)";
+            }
+            return result;
+        }
     }
 }

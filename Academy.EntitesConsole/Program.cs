@@ -20,16 +20,16 @@ namespace Academy.EntitesConsole
             string pDescr = p.ToDescription();
             string pbDescr = pb.ToDescription();
 
-            var car = new Car();
-            car.GetAge();
+            //var car = new Car();
+            //car.GetAge();
 
 
             var bike = new Bicycle("", "");
             bike.GetAge();
 
-            var vehicle = new Vehicle();
-            var vehicle2 = new Vehicle("", "");
-            vehicle2.GetAge();
+            //var vehicle = new Vehicle();
+            //var vehicle2 = new Vehicle("", "");
+            //vehicle2.GetAge();
             
 
             PersonTests();

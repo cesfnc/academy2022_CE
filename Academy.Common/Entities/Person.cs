@@ -38,12 +38,13 @@ namespace Academy.Common.Entities
                 return GetAgePrivate();
             }
         }
+
+
+        public string CF { get; set; }
         #endregion
 
         public Person()
         {
-            //TODO fare quello
-
             DateOfBirth = new DateTime(1901, 1, 1);
         }
 
@@ -64,7 +65,6 @@ namespace Academy.Common.Entities
 
         private int GetAgePrivate()
         {
-            //TODO fare questo
             var interval = DateTime.Now - DateOfBirth;
             var age = (int)Math.Round(interval.TotalDays / 365, 0);
             return age;

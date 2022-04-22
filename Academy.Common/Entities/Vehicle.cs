@@ -2,13 +2,17 @@
 
 namespace Academy.Common.Entities
 {
-    public class Vehicle
+    public abstract class Vehicle
     { 
         public string Brand { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
         public string Color { get; set; }
-        public int Seats { get; set; }
+        public string Plate { get; set; }
+
+        public int DailyPrice { get; set; }
+
+        public bool IsForNewDriver { get; set; }
 
         public Vehicle()
         {
@@ -27,9 +31,15 @@ namespace Academy.Common.Entities
         }
 
 
-        public string GetDescription()
+        public virtual string GetDescription()
         {
             return $"{Brand}-{Model}, year {Year}";
+        }
+
+
+        public override string ToString()
+        {
+            return $"{Brand} {Model}";
         }
     }
 }

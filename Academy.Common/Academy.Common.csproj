@@ -47,9 +47,12 @@
     <Compile Include="Entities\Bicycle.cs" />
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\Car.cs" />
+    <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Periodical.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\Publication.cs" />
+    <Compile Include="Entities\Rent.cs" />
+    <Compile Include="Entities\Track.cs" />
     <Compile Include="Entities\Vehicle.cs" />
     <Compile Include="Enums\Bike.cs" />
     <Compile Include="Enums\Seasons.cs" />
