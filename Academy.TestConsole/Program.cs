@@ -43,7 +43,6 @@ namespace Academy.TestConsole
             object season2 = Enum.Parse(typeof(Season), "winter", true);
             Season realSeason = (Season)season2;
 
-
             Season aaa = Season.Autumn;
             Console.WriteLine($"Integral value of {aaa} is {(int)aaa}");  // output: Integral value of Autumn is 2
 

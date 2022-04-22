@@ -1,6 +1,6 @@
 ﻿using Academy.Common.Enums;
 
-namespace Academy.Common.Entities
+namespace Academy.Common.Entities.Vehicles
 {
     //sealed: non può essere derivata 
     public sealed class Bicycle : Vehicle
@@ -22,7 +22,7 @@ namespace Academy.Common.Entities
         public Bike Type { get; set; }
 
         //(new) hiding metodo classe base
-        public new string GetDescription() 
+        public new string GetDescription()
         {
             return $"{Type} {Brand}-{Model}, year {Year}";
 

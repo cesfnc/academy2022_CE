@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Academy.Common.Entities
+namespace Academy.Common.Entities.Vehicles
 {
     public class Car : Vehicle
     {

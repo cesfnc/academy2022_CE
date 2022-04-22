@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Academy.Totip.Heplers
+namespace Academy.Common.Helpers
 {
     public static class ResultHelper
     {

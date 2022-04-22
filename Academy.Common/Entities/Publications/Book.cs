@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Academy.Common.Entities
+namespace Academy.Common.Entities.Publications
 {
     //classe derivata
     public class Book : Publication

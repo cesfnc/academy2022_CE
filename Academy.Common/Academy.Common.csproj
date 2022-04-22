@@ -44,23 +44,26 @@
   <ItemGroup>
     <Compile Include="Constants\CommonConstants.cs" />
     <Compile Include="Entities\Address.cs" />
-    <Compile Include="Entities\Bicycle.cs" />
-    <Compile Include="Entities\Book.cs" />
-    <Compile Include="Entities\Car.cs" />
+    <Compile Include="Entities\RealEstates\Apartment.cs" />
+    <Compile Include="Entities\RealEstates\Box.cs" />
+    <Compile Include="Entities\RealEstates\RealEstate.cs" />
+    <Compile Include="Entities\RealEstates\Villa.cs" />
+    <Compile Include="Entities\Vehicles\Bicycle.cs" />
+    <Compile Include="Entities\Publications\Book.cs" />
+    <Compile Include="Entities\Vehicles\Car.cs" />
     <Compile Include="Entities\Customer.cs" />
-    <Compile Include="Entities\Periodical.cs" />
+    <Compile Include="Entities\Publications\Periodical.cs" />
     <Compile Include="Entities\Person.cs" />
-    <Compile Include="Entities\Publication.cs" />
+    <Compile Include="Entities\Publications\Publication.cs" />
     <Compile Include="Entities\Rent.cs" />
-    <Compile Include="Entities\Track.cs" />
-    <Compile Include="Entities\Vehicle.cs" />
+    <Compile Include="Entities\Vehicles\Track.cs" />
+    <Compile Include="Entities\Vehicles\Vehicle.cs" />
     <Compile Include="Enums\Bike.cs" />
     <Compile Include="Enums\Seasons.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\ResultHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Academy.Common.Entities
+namespace Academy.Common.Entities.Publications
 {
     //classe base non instanziabile, deve essere derivata
-    public abstract class Publication 
+    public abstract class Publication
     {
         public string Title { get; }
         public string Author { get; }
-        public int  Pages { get; set; }
+        public int Pages { get; set; }
 
 
         public Publication(string title, string author, int pages)

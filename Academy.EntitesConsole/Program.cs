@@ -1,4 +1,6 @@
 ﻿using Academy.Common.Entities;
+using Academy.Common.Entities.Publications;
+using Academy.Common.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +11,22 @@ namespace Academy.EntitesConsole
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
+            var value = "ASDQWEABC/*-$%&";
+
+            //esempio di array di char (singolo carattere)
+            foreach (var item in value.ToCharArray())
+            {
+                Console.WriteLine(item);
+
+            }
+
+            //string: estensione di metodo
+            bool containsABC = value.ContainsABC(); //true
+            var stringNormalized = value.ToNormalized();
+
             //Publication p = new Publication("","",1); //classe abstract non instanziabile
             Book b = new Book("My title", "Gallo Mario", 134);
             Periodical p = new Periodical("Fashon", "AAVV", 30, 7);
@@ -24,8 +40,8 @@ namespace Academy.EntitesConsole
             //car.GetAge();
 
 
-            var bike = new Bicycle("", "");
-            bike.GetAge();
+            //var bike = new Bicycle("", "");
+            //bike.GetAge();
 
             //var vehicle = new Vehicle();
             //var vehicle2 = new Vehicle("", "");

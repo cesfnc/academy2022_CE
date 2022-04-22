@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Academy.Common.Constants;
-using Academy.Totip.Heplers;
+using Academy.Common.Helpers;
 
 Console.WriteLine(CommonConstants.AcademyName);
 

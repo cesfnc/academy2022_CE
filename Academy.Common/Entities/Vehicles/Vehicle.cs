@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Academy.Common.Entities
+namespace Academy.Common.Entities.Vehicles
 {
     public abstract class Vehicle
-    { 
+    {
         public string Brand { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
@@ -16,11 +16,11 @@ namespace Academy.Common.Entities
 
         public Vehicle()
         {
-        
+
         }
 
         public Vehicle(string brand, string model)
-        { 
+        {
             Brand = brand;
             Model = model;
         }

@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Academy.Common.Entities;
+using Academy.Common.Entities.Vehicles;
 
 Console.WriteLine("Noleggio Veicoli\n");
 
