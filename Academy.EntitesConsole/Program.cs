@@ -69,7 +69,7 @@ namespace Academy.EntitesConsole
             giorgia.DateOfBirth = new DateTime(1930, 6, 18);
 
             mario.Mother = giorgia;
-
+            mario.Mother.Car.Year = 1999;
             mario.MyProperty = "test";
 
             //int age = person.Age;

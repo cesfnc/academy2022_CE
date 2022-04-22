@@ -11,6 +11,7 @@ namespace Academy.TestConsole
 
         static void Main(string[] args)
         {
+            string input = Console.ReadLine();
             Console.WriteLine(CommonConstants.AcademyName);
 
             var season = Season.Spring;
@@ -335,4 +336,10 @@ namespace Academy.TestConsole
         
         }
     }
+
+    public class Ciccio
+    {
+        public int Pluto { get; set; }
+    }
+
 }

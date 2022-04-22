@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Common", "..\Academ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.EntitesConsole", "..\Academy.EntitesConsole\Academy.EntitesConsole.csproj", "{55D787A1-5292-494F-A21D-C585AF68700F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Totip", "..\Academy.Totip\Academy.Totip.csproj", "{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{55D787A1-5292-494F-A21D-C585AF68700F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55D787A1-5292-494F-A21D-C585AF68700F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55D787A1-5292-494F-A21D-C585AF68700F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A99B1BF-260D-4CC0-9AB1-68653BE0A8ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
